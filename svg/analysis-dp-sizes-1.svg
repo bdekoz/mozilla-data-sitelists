@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="11in"
+   height="8.5in"
+   viewBox="0 0 279.4 215.9"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="analysis-dp-sizes.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="in"
+     inkscape:zoom="1"
+     inkscape:cx="445.5"
+     inkscape:cy="560.5"
+     inkscape:window-width="2316"
+     inkscape:window-height="2067"
+     inkscape:window-x="1472"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="308.38937,106.95108"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="139.98372,450.02372"
+       orientation="1,0"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="158.66947,38.171137"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="217.75359,153.95696"
+       orientation="1,0"
+       id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="126.26849,218.28242"
+       orientation="1,0"
+       id="guide8"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="61.943035,161.10424"
+       orientation="1,0"
+       id="guide9"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="22.601623,268.21443"
+       orientation="1,0"
+       id="guide10"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="viewports"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.176389;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1"
+       width="17.856531"
+       height="39.856529"
+       x="14.292515"
+       y="89.271767" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.176389;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2"
+       width="17.856531"
+       height="39.856529"
+       x="-117.97623"
+       y="42.292877"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.176389;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3"
+       width="38.126118"
+       height="68.026123"
+       x="-128.25676"
+       y="92.293633"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.176389;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4"
+       width="76.340706"
+       height="95.54071"
+       x="-147.24922"
+       y="170.29333"
+       transform="rotate(-90)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="txt" />
+  <text
+     xml:space="preserve"
+     style="font-size:4.93888889px;line-height:1;font-family:'Atkinson Hyperlegible';-inkscape-font-specification:'Atkinson Hyperlegible';text-align:center;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+     x="22.623621"
+     y="177.05638"
+     id="text10"><tspan
+       sodipodi:role="line"
+       id="tspan10"
+       style="line-height:1;text-align:center;text-anchor:middle;stroke-width:0.264583;font-size:4.93888889px"
+       x="22.623621"
+       y="177.05638">mobile portrait</tspan><tspan
+       sodipodi:role="line"
+       style="line-height:1;text-align:center;text-anchor:middle;stroke-width:0.264583;font-size:4.93888889px"
+       x="22.623621"
+       y="183.40639"
+       id="tspan11">360x800</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:4.93889px;line-height:1;font-family:'Atkinson Hyperlegible';-inkscape-font-specification:'Atkinson Hyperlegible, Normal';text-align:center;word-spacing:0px;text-anchor:middle;stroke-width:0.264583;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+     x="62.311157"
+     y="177.05638"
+     id="text13"><tspan
+       sodipodi:role="line"
+       id="tspan13">mobile landscape</tspan><tspan
+       sodipodi:role="line"
+       id="tspan14">800x360</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1;font-family:'Atkinson Hyperlegible';-inkscape-font-specification:'Atkinson Hyperlegible, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+     x="126.34035"
+     y="177.05638"
+     id="text16"><tspan
+       sodipodi:role="line"
+       id="tspan20">laptop</tspan><tspan
+       sodipodi:role="line"
+       id="tspan21">1366x768</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1;font-family:'Atkinson Hyperlegible';-inkscape-font-specification:'Atkinson Hyperlegible, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+     x="217.88496"
+     y="177.05638"
+     id="text18"><tspan
+       sodipodi:role="line"
+       id="tspan18">workstation</tspan><tspan
+       sodipodi:role="line"
+       id="tspan19">1920x1536</tspan></text>
+</svg>
