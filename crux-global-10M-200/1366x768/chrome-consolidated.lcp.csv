@@ -5,8 +5,8 @@ url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lc
 3|http://abcloudsoft.com|2|40|1005|4799|5500|3451|3302|4035|""https://abcloudsoft.com/banner/bg.png""
 4|http://adelaide.china-consulate.gov.cn|2|10|647|2273|8524|1387|1681|1704|""https://adelaide.china-consulate.gov.cn/images/header.jpg""
 5|http://advanced-personality.com|1063|1476|2193|3386|4111|2750|0|4066|""<div class="title-home twothird"></div>""
-7|http://ag.win999.com|503|503|713|0|0|
-6|http://agmindis.lt|1107|1107|1938|3801|9910|2581|3911|3931|""http://agmindis.lt/wp-content/uploads/1-12-650x277.jpg""
+6|http://ag.win999.com|503|503|713|0|0|
+7|http://agmindis.lt|1107|1107|1938|3801|9910|2581|3911|3931|""http://agmindis.lt/wp-content/uploads/1-12-650x277.jpg""
 8|http://ahlevela.com|2|234|1258|3722|3800|3072|3844|3905|""https://ahlevela.com/templates/ahlevela/images/header.jpg""
 9|http://aiharamao.seesaa.net|296|296|420|2304|3266|1117|2114|2114|""http://blog.seesaa.jp/img/bg/green_leaves/head.jpg""
 10|http://aks.roshd.ir|3004|3004|3370|5523|6533|4903|5419|5436|""http://aks.roshd.ir/css/main/c-t.gif""
@@ -28,13 +28,13 @@ url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lc
 26,http://baztehshop.ru,,,,,,,,,
 27|http://bbsswap.de|2048|2048|2252|8972|11767|4734|0|11886|""http://bbsswap.de/img/sbbs/video.mp4""
 28|http://bda.ariege.fr|2|503|1396|3435|2470|2271|2295|2337|""https://bda.ariege.fr/var/cg09/storage/images/mediatheque/bdp/lire-ecouter-voir/ecouter/catalogue-formation-2024/633811-1-fre-FR/Catalogue-formation-2024_accueil-slider.jpg""
-31|http://be-side.jp|3|596|1324|1400|1400|1369|0|1369|""<p></p>""
-29,http://beamstory.php.xdomain.jp,,,,,,,,,
-30|http://bellsmillfishery.co.uk|3003|3004|5170|7100|7308|6287|7268|7287|""http://bellsmillfishery.co.uk/wp-content/uploads/2020/02/d4ad5094-2265-426b-8069-9a8ae4b53822.jpg""
+29|http://be-side.jp|3|596|1324|1400|1400|1369|0|1369|""<p></p>""
+30,http://beamstory.php.xdomain.jp,,,,,,,,,
+31|http://bellsmillfishery.co.uk|3003|3004|5170|7100|7308|6287|7268|7287|""http://bellsmillfishery.co.uk/wp-content/uploads/2020/02/d4ad5094-2265-426b-8069-9a8ae4b53822.jpg""
 32|http://bestgolf.co.jp|2|826|1445|1700|1700|1686|0|1686|""<p></p>""
 33|http://betulart.hu|1164|1682|2299|3994|4004|3116|0|3116|""<span data-sr-id="4" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;"></span>""
-35|http://bi-bahane.blogfa.com|332|332|431|2626|2570|2002|3055|3055|""http://themeupload.theme-designer.com/62/image/2.jpg""
-34|http://bi.alfatransportes.com.br|0|0|4041|10108|10866|6540|0|6557|""<div id="texto-inicial"></div>""
+34|http://bi-bahane.blogfa.com|332|332|431|2626|2570|2002|3055|3055|""http://themeupload.theme-designer.com/62/image/2.jpg""
+35|http://bi.alfatransportes.com.br|0|0|4041|10108|10866|6540|0|6557|""<div id="texto-inicial"></div>""
 36|http://blog.fefe.de|2|9|654|734|734|704|0|704|""<p></p>""
 37|http://bluearknd63sat.blog86.fc2.com|139|139|194|508|566|437|531|531|""http://blog-imgs-32-origin.fc2.com/b/l/u/bluearknd63sat/bmheada02.jpg""
 38|http://bocaraton.matteosristorante.com|3004|3004|31212|32361|32433|31652|32366|32386|""http://bocaraton.matteosristorante.com/wp-content/uploads/2022/11/BOCA-MAIN.jpg""
@@ -101,11 +101,11 @@ url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lc
 99|http://freemindscafe.com|367|367|1022|5850|6084|1055|1036|1055|""data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodH""
 100|http://ftp.ines.ro|2072|2072|2375|2490|2600|2421|0|2421|""<address></address>""
 101|http://furgos.com|3004|3004|5218|7400|8033|6799|7291|8466|""http://furgos.com/wp-content/uploads/Mudanza.jpg""
-106|http://g-keifu.com|2|260|876|1133|1133|1121|1075|1121|""data:image/png;base64,%0AiVBORw0KGgoAAAANSUhEUgAAAlgAAABsCAIAAAA5cFsZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSB""
-102|http://gallery.homoemo.com|2|76|335|400|400|370|0|370|""<body></body>""
-103|http://gepia2021.cancer-pku.cn|1017|1017|1216|2596|3100|1887|3059|3070|""http://gepia2021.cancer-pku.cn/GEPIA2021.png""
-104|http://gidonline.ru|1903|1903|2108|3823|4133|3220|0|3220|""<h1 class="js-defaultHeader banner__header hide"></h1>""
-105|http://gimnazija-druga-vz.skole.hr|2|452|1885|0|0|
+102|http://g-keifu.com|2|260|876|1133|1133|1121|1075|1121|""data:image/png;base64,%0AiVBORw0KGgoAAAANSUhEUgAAAlgAAABsCAIAAAA5cFsZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSB""
+103|http://gallery.homoemo.com|2|76|335|400|400|370|0|370|""<body></body>""
+104|http://gepia2021.cancer-pku.cn|1017|1017|1216|2596|3100|1887|3059|3070|""http://gepia2021.cancer-pku.cn/GEPIA2021.png""
+105|http://gidonline.ru|1903|1903|2108|3823|4133|3220|0|3220|""<h1 class="js-defaultHeader banner__header hide"></h1>""
+106|http://gimnazija-druga-vz.skole.hr|2|452|1885|0|0|
 107|http://globolandia.com.ar|2|702|1878|4268|4972|3037|3570|4937|""https://globolandia.com.ar/frontend/images/bg-slider-01.jpg""
 108,http://glpi.subredsur.gov.co,,,,,,,,,
 109|http://gnezdyshko.org|1176|1176|1895|3888|4266|3271|4231|4254|""http://gnezdyshko.org/wp-content/uploads/2023/06/%D1%81%D0%B0%D0%B9%D1%82.png""
@@ -131,8 +131,8 @@ url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lc
 129|http://ishombinali.blogspot.com|2|123|318|538|534|503|484|519|""https://2.bp.blogspot.com/-zmufkamm4EU/VLm90Euq-3I/AAAAAAAAACI/KjsPX8adTyk/s1600/moh%2Bishomuddin%2B%25282%2529.jpg""
 130|http://izhora-dvk.ru|1|10|363|12369|13609|506|0|506|""<h1></h1>""
 131|http://j5fmadeif3.lalsl.com|3004|3004|3252|0|0|
-133|http://ja.kushiro-lakeakan.com|3|268|1505|10885|17466|5337|5211|5337|""https://ja.kushiro-lakeakan.com/kushiroakanwp/wp-content/themes/visitkushiro/imgs/common/logo.png""
-132|http://jaffnaushotel.com|478|478|1214|5967|6066|3402|6002|6019|""http://jaffnaushotel.com/assets/images/us-hotel.jpg""
+132|http://ja.kushiro-lakeakan.com|3|268|1505|10885|17466|5337|5211|5337|""https://ja.kushiro-lakeakan.com/kushiroakanwp/wp-content/themes/visitkushiro/imgs/common/logo.png""
+133|http://jaffnaushotel.com|478|478|1214|5967|6066|3402|6002|6019|""http://jaffnaushotel.com/assets/images/us-hotel.jpg""
 134|http://javahery.blogfa.com|310|310|410|612|566|551|0|551|""<p dir="RTL" style="text-align:justify"></p>""
 135|http://jha.ppj.unp.ac.id|1990|1990|2657|3705|4391|3152|4309|4336|""http://jha.ppj.unp.ac.id/public/journals/1/pageHeaderLogoImage_en_US.png""
 136|http://jikei1-y.sakura-g.ac.jp|2|377|994|1266|1266|1253|1208|1253|""data:image/png;base64,%0AiVBORw0KGgoAAAANSUhEUgAAAlgAAABsCAIAAAA5cFsZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSB""

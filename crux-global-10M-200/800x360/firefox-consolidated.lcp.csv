@@ -5,8 +5,8 @@ url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lc
 3|http://abcloudsoft.com|8|76|1128|2830|3133|1716|3401|3416|""http://abcloudsoft.com/banner/bg.png""
 4|http://adelaide.china-consulate.gov.cn|9|300|817|2718|2800|2282|0|2300|""<div id="demo1"></div>""
 5|http://advanced-personality.com|998|1408|2431|3076|3166|2898|0|2910|""<h1 class="highlight2" style="color: rgb(235, 61, 96);"></h1>""
-7|http://ag.win999.com|8|180|479|0|0|
-6|http://agmindis.lt|9|544|1495|2860|2967|2221|3109|3122|""http://agmindis.lt/wp-content/themes/Real%20Estate%20v1.3/skins/1-default/i-headerbg.png""
+6|http://ag.win999.com|8|180|479|0|0|
+7|http://agmindis.lt|9|544|1495|2860|2967|2221|3109|3122|""http://agmindis.lt/wp-content/themes/Real%20Estate%20v1.3/skins/1-default/i-headerbg.png""
 8|http://ahlevela.com|8|427|1762|3888|4404|3307|4715|4725|""http://ahlevela.com/templates/ahlevela/images/header.jpg""
 9|http://aiharamao.seesaa.net|10|30|265|1305|1167|905|1250|1250|""http://blog.seesaa.jp/img/bg/green_leaves/head.jpg""
 10|http://aks.roshd.ir|8|697|1278|3881|4504|3363|4542|4548|""http://aks.roshd.ir/css/main/c-t.gif""
@@ -28,13 +28,13 @@ url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lc
 26|http://baztehshop.ru|10|454|1467|3283|3537|2969|3788|3803|""http://baztehshop.ru/d/site_logo.png""
 27|http://bbsswap.de|10|615|1036|4936|5005|3378|0|3390|""<a href="schulfoerderverein.php"></a>""
 28|http://bda.ariege.fr|8|61|495|2173|5866|1128|5823|5830|""http://bda.ariege.fr/extension/bdp/design/bdp/images/background/BANDEAU-BDP.jpg""
-31|http://be-side.jp|11|281|690|2825|3867|1185|3840|3852|""http://be-side.jp/blog_sys/mt-static/FileUpload/pics/new_beiside_parts/top002.jpg""
-29|http://beamstory.php.xdomain.jp|9|161|570|2351|3533|2074|0|2088|""<h1></h1>""
-30|http://bellsmillfishery.co.uk|9|37|413|1902|1700|1185|2052|2069|""http://bellsmillfishery.co.uk/wp-content/uploads/2020/02/d4ad5094-2265-426b-8069-9a8ae4b53822.jpg""
+29|http://be-side.jp|11|281|690|2825|3867|1185|3840|3852|""http://be-side.jp/blog_sys/mt-static/FileUpload/pics/new_beiside_parts/top002.jpg""
+30|http://beamstory.php.xdomain.jp|9|161|570|2351|3533|2074|0|2088|""<h1></h1>""
+31|http://bellsmillfishery.co.uk|9|37|413|1902|1700|1185|2052|2069|""http://bellsmillfishery.co.uk/wp-content/uploads/2020/02/d4ad5094-2265-426b-8069-9a8ae4b53822.jpg""
 32|http://bestgolf.co.jp|8|338|702|1283|1633|1054|1618|1621|""http://bestgolf.co.jp/images/25.jpg""
 33|http://betulart.hu|9|392|1338|3731|3533|3520|5334|5339|""http://betulart.hu/img/header-bgr.png""
-35|http://bi-bahane.blogfa.com|9|37|214|2182|2600|840|2659|2659|""http://www.blogfa.com/b/1A8133D0955.gif""
-34|http://bi.alfatransportes.com.br|1003|1003|1213|3977|4204|3790|0|3800|""<div id="texto-inicial"></div>""
+34|http://bi-bahane.blogfa.com|9|37|214|2182|2600|840|2659|2659|""http://www.blogfa.com/b/1A8133D0955.gif""
+35|http://bi.alfatransportes.com.br|1003|1003|1213|3977|4204|3790|0|3800|""<div id="texto-inicial"></div>""
 36|http://blog.fefe.de|9|57|477|567|567|554|0|555|""<body></body>""
 37|http://bluearknd63sat.blog86.fc2.com|10|128|212|661|733|468|697|697|""http://blog-imgs-32-origin.fc2.com/b/l/u/bluearknd63sat/bmheada02.jpg""
 38|http://bocaraton.matteosristorante.com|9|86|912|1741|1767|1439|1778|1790|""http://bocaraton.matteosristorante.com/wp-content/uploads/2022/11/BOCA-MAIN-960x521.jpg""
@@ -101,11 +101,11 @@ url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lc
 99|http://freemindscafe.com|8|308|1121|6032|8000|1197|1184|1197|""data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiPgogICAgICA8c3R5bGU+CiAgICAgICAgOnJvb3QgewogICAgICAgICAgLS1hbmltYXRpb24tc3RhdGU6IHBhdXNlZDsKICAgICAgICB9CgogICAgICAgIC8qIHVzZXIgcGlja2VkIGEgdGhlbWUgd2hlcmUgdGhlICJyZWd1bGFyIiBzY2hlbWUgaXMgZGFyayAqLwogICAgICAgIC8qIHVzZXIgcGlja2VkIGEgdGhlbWUgYSBsaWdodCBzY2hlbWUgYW5kIGFsc28gZW5hYmxlZCBhIGRhcmsgc2NoZW1lICovCgogICAgICAgIC8qIGRlYWwgd2l0aCBsaWdodCBzY2hlbWUgZmlyc3QgKi8KICAgICAgICBAbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOiBsaWdodCkgewogICAgICAgICAgOnJvb3QgewogICAgICAgICAgICAtLXByaW1hcnk6ICMyMjIyMjI7CiAgICAgICAgICAgIC0tc2Vjb25kYXJ5OiAjZmZmZmZmOwogICAgICAgICAgICAtLXRlcnRpYXJ5OiAjMDA4OGNjOwogICAgICAgICAgICAtLXF1YXRlcm5hcnk6ICNlNDU3MzU7CiAgICAgICAgICAgIC0taGlnaGxpZ2h0OiAjZmZmZjRkOwogICAgICAgICAgICAtLXN1Y2Nlc3M6ICMwMDk5MDA7CiAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICAvKiB0aGVuIGRlYWwgd2l0aCBkYXJrIHNjaGVtZSAqLwogICAgICAgIEBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspIHsKICAgICAgICAgIDpyb290IHsKICAgICAgICAgICAgLS1wcmltYXJ5OiAjMjIyMjIyOwogICAgICAgICAgICAtLXNlY29uZGFyeTogI2ZmZmZmZjsKICAgICAgICAgICAgLS10ZXJ0aWFyeTogIzAwODhjYzsKICAgICAgICAgICAgLS1xdWF0ZXJuYXJ5OiAjZTQ1NzM1OwogICAgICAgICAgICAtLWhpZ2hsaWdodDogI2ZmZmY0ZDsKICAgICAgICAgICAgLS1zdWNjZXNzOiAjMDA5OTAwOwogICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgLyogdGhlc2Ugc3R5bGVzIG5lZWQgdG8gbGl2ZSBoZXJlIGJlY2F1c2UgdGhlIFNWRyBoYXMgYSBkaWZmZXJlbnQgc2NvcGUgKi8KICAgICAgICAuZG90cyB7CiAgICAgICAgICBhbmltYXRpb24tbmFtZTogbG9hZGVyOwogICAgICAgICAgYW5pbWF0aW9uLXRpbWluZy1mdW5jdGlvbjogZWFzZS1pbi1vdXQ7CiAgICAgICAgICBhbmltYXRpb24tZHVyYXRpb246IDNzOwogICAgICAgICAgYW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDogaW5maW5pdGU7CiAgICAgICAgICBhbmltYXRpb24tcGxheS1zdGF0ZTogdmFyKC0tYW5pbWF0aW9uLXN0YXRlKTsKICAgICAgICAgIHN0cm9rZTogI2ZmZjsKICAgICAgICAgIHN0cm9rZS13aWR0aDogMC41cHg7CiAgICAgICAgICB0cmFuc2Zvcm0tb3JpZ2luOiBjZW50ZXI7CiAgICAgICAgICBvcGFjaXR5OiAwOwogICAgICAgICAgcjogbWF4KDF2dywgMTFweCk7CiAgICAgICAgICBjeTogNTAlOwogICAgICAgICAgZmlsdGVyOiBzYXR1cmF0ZSgyKSBvcGFjaXR5KDAuODUpOwogICAgICAgIH0KCiAgICAgICAgLmRvdHM6Zmlyc3QtY2hpbGQgewogICAgICAgICAgZmlsbDogdmFyKC0tcXVhdGVybmFyeSk7CiAgICAgICAgfQoKICAgICAgICAuZG90czpudGgtY2hpbGQoMikgewogICAgICAgICAgZmlsbDogdmFyKC0tcXVhdGVybmFyeSk7CiAgICAgICAgICBhbmltYXRpb24tZGVsYXk6IDAuMTVzOwogICAgICAgIH0KCiAgICAgICAgLmRvdHM6bnRoLWNoaWxkKDMpIHsKICAgICAgICAgIGZpbGw6IHZhcigtLWhpZ2hsaWdodCk7CiAgICAgICAgICBhbmltYXRpb24tZGVsYXk6IDAuM3M7CiAgICAgICAgfQoKICAgICAgICAuZG90czpudGgtY2hpbGQoNCkgewogICAgICAgICAgZmlsbDogdmFyKC0tdGVydGlhcnkpOwogICAgICAgICAgYW5pbWF0aW9uLWRlbGF5OiAwLjQ1czsKICAgICAgICB9CgogICAgICAgIC5kb3RzOm50aC1jaGlsZCg1KSB7CiAgICAgICAgICBmaWxsOiB2YXIoLS10ZXJ0aWFyeSk7CiAgICAgICAgICBhbmltYXRpb24tZGVsYXk6IDAuNnM7CiAgICAgICAgfQoKICAgICAgICBAa2V5ZnJhbWVzIGxvYWRlciB7CiAgICAgICAgICAwJSB7CiAgICAgICAgICAgIG9wYWNpdHk6IDA7CiAgICAgICAgICAgIHRyYW5zZm9ybTogc2NhbGUoMSk7CiAgICAgICAgICB9CiAgICAgICAgICA0NSUgewogICAgICAgICAgICBvcGFjaXR5OiAxOwogICAgICAgICAgICB0cmFuc2Zvcm06IHNjYWxlKDAuNyk7CiAgICAgICAgICB9CiAgICAgICAgICA2NSUgewogICAgICAgICAgICBvcGFjaXR5OiAxOwogICAgICAgICAgICB0cmFuc2Zvcm06IHNjYWxlKDAuNyk7CiAgICAgICAgICB9CiAgICAgICAgICAxMDAlIHsKICAgICAgICAgICAgb3BhY2l0eTogMDsKICAgICAgICAgICAgdHJhbnNmb3JtOiBzY2FsZSgxKTsKICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIDwvc3R5bGU+CgogICAgICA8ZyBjbGFzcz0iY29udGFpbmVyIj4KICAgICAgICA8Y2lyY2xlIGNsYXNzPSJkb3RzIiBjeD0iMzB2dyIvPgogICAgICAgIDxjaXJjbGUgY2xhc3M9ImRvdHMiIGN4PSI0MHZ3Ii8+CiAgICAgICAgPGNpcmNsZSBjbGFzcz0iZG90cyIgY3g9IjUwdnciLz4KICAgICAgICA8Y2lyY2xlIGNsYXNzPSJkb3RzIiBjeD0iNjB2dyIvPgogICAgICAgIDxjaXJjbGUgY2xhc3M9ImRvdHMiIGN4PSI3MHZ3Ii8+CiAgICAgIDwvZz4KICAgIDwvc3ZnPg==""
 100|http://ftp.ines.ro|8|650|1058|1152|1133|1133|0|1134|""<h1></h1>""
 101|http://furgos.com|8|480|2680|5428|5433|5346|5911|5914|""http://furgos.com/wp-content/themes/real-spaces/revslider/rs-plugin/assets/coloredbg.png""
-106|http://g-keifu.com|8|209|1332|2709|2703|2689|2912|2922|""http://g-keifu.com/wp-content/uploads/tcd-w/logo.jpg?1707248995""
-102|http://gallery.homoemo.com|8|67|238|0|0|
-103|http://gepia2021.cancer-pku.cn|8|213|695|1162|1266|830|2028|2030|""http://gepia2021.cancer-pku.cn/GEPIA2021.png""
-104|http://gidonline.ru|8|597|1000|2070|2302|1617|0|1617|""<h1 class="js-defaultHeader banner__header hide"></h1>""
-105|http://gimnazija-druga-vz.skole.hr|8|299|1425|5938|6406|5318|6541|6553|""http://gimnazija-druga-vz.skole.hr/upload/gimnazija-druga-vz/images/headers/Image/okrugli_3.jpg""
+102|http://g-keifu.com|8|209|1332|2709|2703|2689|2912|2922|""http://g-keifu.com/wp-content/uploads/tcd-w/logo.jpg?1707248995""
+103|http://gallery.homoemo.com|8|67|238|0|0|
+104|http://gepia2021.cancer-pku.cn|8|213|695|1162|1266|830|2028|2030|""http://gepia2021.cancer-pku.cn/GEPIA2021.png""
+105|http://gidonline.ru|8|597|1000|2070|2302|1617|0|1617|""<h1 class="js-defaultHeader banner__header hide"></h1>""
+106|http://gimnazija-druga-vz.skole.hr|8|299|1425|5938|6406|5318|6541|6553|""http://gimnazija-druga-vz.skole.hr/upload/gimnazija-druga-vz/images/headers/Image/okrugli_3.jpg""
 107|http://globolandia.com.ar|9|287|1003|2864|4600|1600|0|1601|""<h1 class="sr-only"></h1>""
 108,http://glpi.subredsur.gov.co,,,,,,,,,
 109|http://gnezdyshko.org|8|3384|4411|6636|6833|5655|0|5684|""<h1 class="site-title" original-font-size="34.9635px" original-border-color="rgb(0, 68, 136)" original-background-color="rgba(0, 0, 0, 0)" original-background-image="none" original-color="rgb(0, 68, 136)" original-box-shadow="none" original-text-shadow="none" original-font-family="&quot;Bitter&quot;, Georgia, Arial, Tahoma" original-letter-spacing="0" original-line-height="34.9667px"></h1>""
@@ -131,8 +131,8 @@ url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lc
 129|http://ishombinali.blogspot.com|10|77|208|682|667|597|621|631|""http://2.bp.blogspot.com/-zmufkamm4EU/VLm90Euq-3I/AAAAAAAAACI/KjsPX8adTyk/s1600/moh%2Bishomuddin%2B%25282%2529.jpg""
 130|http://izhora-dvk.ru|1469|1486|2756|0|0|
 131|http://j5fmadeif3.lalsl.com|9|461|920|0|0|
-133|http://ja.kushiro-lakeakan.com|8|313|1746|6277|12533|2947|4085|4098|""http://ja.kushiro-lakeakan.com/kushiroakanwp/wp-content/themes/visitkushiro/imgs/common/logo.png""
-132|http://jaffnaushotel.com|8|316|1043|4153|4771|1662|4783|4796|""http://jaffnaushotel.com/assets/images/us-hotel.jpg""
+132|http://ja.kushiro-lakeakan.com|8|313|1746|6277|12533|2947|4085|4098|""http://ja.kushiro-lakeakan.com/kushiroakanwp/wp-content/themes/visitkushiro/imgs/common/logo.png""
+133|http://jaffnaushotel.com|8|316|1043|4153|4771|1662|4783|4796|""http://jaffnaushotel.com/assets/images/us-hotel.jpg""
 134|http://javahery.blogfa.com|8|62|235|2403|8175|426|2629|2629|""http://www.blogfa.com/b/1A8139D7B2C.gif""
 135|http://jha.ppj.unp.ac.id|1167|1167|1783|2684|2966|2429|3126|3129|""http://jha.ppj.unp.ac.id/public/journals/1/pageHeaderLogoImage_en_US.png""
 136|http://jikei1-y.sakura-g.ac.jp|11|156|1795|3126|3400|2354|3495|3505|""http://jikei1-y.sakura-g.ac.jp/wordpress/wp-content/uploads/2022/01/omise-1349x447.jpg""
