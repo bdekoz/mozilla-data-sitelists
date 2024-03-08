@@ -28,7 +28,7 @@ newline = "\n";
 data_prefix ='https://raw.githubusercontent.com/bdekoz/mozilla-data-lcp/main/';
 sitebase = 'CrUX_global_200_10M-2023-12';
 sitelist = sitebase + '.txt.ping';
-sitefile = data_prefix + "sitelists/" + sitelist;
+sitefile = data_prefix + "sitelists/CrUX.2023-12/" + sitelist;
 
 # sitelist currently reachable
 #errfile = gdriveprefix + sitebase + ".error.txt";
@@ -61,6 +61,29 @@ def origin_contains(origin, match, logfile):
 
 
 
+#@title check sitelist
+
+#with urllib.request.urlopen(sitefile) as response:
+#  print("found: " + sitefile);
+
+#  errlog = open(errfile, "w");
+#  passlog = open(okfile, "w");
+#  print(errfile);
+#  print(okfile);
+
+# for line in response.readlines():
+#    origin = line.decode("ascii").strip(newline); # utf-8, ascii
+#    try:
+#      origin_check_readable(origin, errlog);
+#      passlog.write(origin + newline);
+#    except:
+#      continue;
+
+#  errlog.close();
+#  passlog.close();
+
+
+
 #@title create_content_setasides(sitefile, tag, match)
 
 # Open the URL and read the contents, establish sitelist size.
@@ -71,17 +94,31 @@ print("sites: " + str(siten))
 
 
 # Web Content string fragments
-# <link rel="preconnect"
+# <link rel="preconnect" or <link rel=preconnect
 # <link rel="dns-prefetch"
 # https://developer.mozilla.org/en-US/docs/Web/Performance/Speculative_loading
 # https://developer.mozilla.org/en-US/docs/Web/Performance/dns-prefetch
+# https://fetch.spec.whatwg.org/#concept-request-destination
 wc1='rel="dns-prefetch"';
-wc2='rel="preconnect"';
-wc3='rel="preload"';
-wc4='rel="prefetch"';
-wc5='rel="prerender"';
+wc1a='rel=dns-prefetch';
 
-def create_content_traits(sitefile, tag, matchstr):
+wc2='rel=preconnect';
+wc2a='rel="preconnect"';
+
+wc3='rel="preload"';
+wc3a='rel=preload';
+
+wc4='rel="prefetch"';
+wc4a='rel=prefetch';
+
+wc5='rel="prerender"';
+wc5a='rel=prerender';
+
+wc5='rel="dictionary"';
+wc5a='rel=dictionary';
+
+
+def create_content_traits_1(sitefile, tag, matchstr):
   log = open(tag + ".error.log", "w");
   df = pd.DataFrame(columns=[tag], index=range(siten))
 
@@ -109,8 +146,46 @@ def create_content_traits(sitefile, tag, matchstr):
   log.close();
   df.to_csv(tag + ".csv");
 
-create_content_traits(sitefile, "wc1", wc1);
-create_content_traits(sitefile, "wc2", wc2);
-create_content_traits(sitefile, "wc3", wc3);
-create_content_traits(sitefile, "wc4", wc4);
-create_content_traits(sitefile, "wc5", wc5);
+
+def create_content_traits_2(sitefile, tag, matchstr1, matchstr2):
+  log = open(tag + ".error.log", "w");
+  df = pd.DataFrame(columns=[tag], index=range(siten))
+
+  # Scan and store data for lookups.
+  with urllib.request.urlopen(sitefile) as response:
+    linen = 0
+    for line in response.readlines():
+      origin = line.decode("ascii").strip(newline); # utf-8, ascii
+
+      try:
+        matchp = False
+        r = requests.get(origin);
+        if matchstr1 in r.text:
+          matchp = True
+        if matchstr2 in r.text:
+          matchp = True
+        print(str(linen) + tab + str(matchp));
+        df.iloc[linen, 0] = matchp;
+      except:
+        log.write(str(linen) + ',' + origin + newline);
+        df.iloc[linen, 0] = np.NaN;
+        continue;
+      finally:
+        linen += 1;
+
+  print("finished");
+  log.close();
+  df.to_csv(tag + ".csv");
+
+
+#create_content_traits_1(sitefile, "wc1", wc1);
+#create_content_traits_1(sitefile, "wc2", wc2);
+#create_content_traits_1(sitefile, "wc3", wc3);
+#create_content_traits_1(sitefile, "wc4", wc4);
+#create_content_traits_1(sitefile, "wc5", wc5);
+
+create_content_traits_2(sitefile, "dns-prefetch", wc1, wc1a);
+create_content_traits_2(sitefile, "preconnect", wc2, wc2a);
+create_content_traits_2(sitefile, "preload", wc3, wc3a);
+create_content_traits_2(sitefile, "prerender", wc4, wc4a);
+create_content_traits_2(sitefile, "dictionary", wc5, wc5a);
