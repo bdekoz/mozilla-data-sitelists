@@ -30,16 +30,15 @@ and surveying on google collab-hosted scripts will not connect to Iran
   warned that running large sitelists with multiple iterations and a
   matrix of different browsers can take up a lot of time (days/bleeding
   into weeks) and monopolize machines.
+
   The outputs of this survey are:
     - sitelists and refined sitelists checked in to a github repo
     - sitelist metadata in the form of CSV setasides where each site is
     queried to see if the web content contains advanced HTML or
     javascript characteristics, and if so a boolean true is put in the
     setaside, if not false is recorded.
-
     - test results and videos stored as compressed data files on google
     drive, organized by test date and sitelist used.
-
     - dense data derivities built (via ETL) on this data set that extract given
     metrics to either influx db entries of csv files, suitable for import
     into python/Pandas data frame.
