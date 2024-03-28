@@ -39,7 +39,7 @@ and surveying on google collab-hosted scripts will not connect to Iran
     - test results and videos stored as compressed data files on google
     drive, organized by test date and sitelist used.
     - dense data derivities built (via ETL) on this data set that extract given
-    metrics to either influx db entries of csv files, suitable for import
+    metrics to either influx db entries or csv files, suitable for import
     into python/Pandas data frame.
 
 5. Analyze Survey.
