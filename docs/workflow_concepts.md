@@ -18,8 +18,8 @@ and surveying on google collab-hosted scripts will not connect to Iran
 (.ir) TLDs).
 
 2. Refine the raw list by either/or:
-  -- a. only the URLS where ETLD+1 can be pinged from the terminal
-  -- b. only the URLs where python's urllib requests do not error
+    - a. only the URLS where ETLD+1 can be pinged from the terminal
+    - b. only the URLs where python's urllib requests do not error
 
 3. Survey sites. The refined list is then used to run performance tests using the
 browsertime framework, surveying web performance with headless
