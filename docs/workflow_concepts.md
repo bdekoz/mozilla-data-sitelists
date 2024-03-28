@@ -18,12 +18,10 @@ and surveying on google collab-hosted scripts will not connect to Iran
 (.ir) TLDs).
 
 2. Refine the raw list by either/or:
-- a. only the URLS where ETLD+1 can be pinged from the terminal
-- b. only the URLs where python's urllib requests do not error
+  - a. only the URLS where ETLD+1 can be pinged from the terminal
+  - b. only the URLs where python's urllib requests do not error
 
-
-3. Survey sites
-The refined list is then used to run performance tests using the
+3. Survey sites. The refined list is then used to run performance tests using the
 browsertime framework, surveying web performance with headless
 browsers collecting data, being careful to run the tests on the same
 network/setup that was used to refine the list. The survey must
@@ -48,7 +46,6 @@ drive, organized by test date and sitelist used.
 - dense data derivities built (via ETL) on this data set that extract given
 metrics to either influx db entries of csv files, suitable for import
 into python/Pandas data frame.
-
 
 4. Analyze Survey
 
