@@ -44,6 +44,6 @@ and surveying on google collab-hosted scripts will not connect to Iran
     metrics to either influx db entries of csv files, suitable for import
     into python/Pandas data frame.
 
-5. Analyze Survey
+5. Analyze Survey.
   Load csv files into pandas in Google Collab. Results can be
   partitioned via the setasides to focus on particular optimizations.
