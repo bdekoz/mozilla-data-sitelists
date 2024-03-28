@@ -1,4 +1,4 @@
-#workflow
+# workflow
 
 
 Sitelist building is via queries into CrUX for a given date. This data
@@ -6,9 +6,9 @@ can be exported in a variety of formats with a variable number of
 entries. This is the raw sitelist.
 
 Some sites on this list, culled from Google servers all over the
-world, will be down or unreachable from network and time you are
-trying to reach them. So, in order to remove long timeouts from the
-test process, the sitelist must be refined before used.
+world, will be down or unreachable from the network, geography, or time you are
+trying to reach them. So, in order to remove unreachable sites that cause long timeouts in the
+test and survey process, the sitelist must be refined before used.
 
 
 1. Take note of the test computer, the test network, and the prevaling
@@ -18,8 +18,8 @@ and surveying on google collab-hosted scripts will not connect to Iran
 (.ir) TLDs).
 
 2. Refine the raw list by either/or:
-a. only the URLS where ETLD+1 can be pinged from the terminal
-b. only the URLs where python's urllib requests do not error
+- a. only the URLS where ETLD+1 can be pinged from the terminal
+- b. only the URLs where python's urllib requests do not error
 
 
 3. Survey sites
