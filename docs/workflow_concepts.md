@@ -30,10 +30,8 @@ and surveying on google collab-hosted scripts will not connect to Iran
   warned that running large sitelists with multiple iterations and a
   matrix of different browsers can take up a lot of time (days/bleeding
   into weeks) and monopolize machines.
-
   The outputs of this survey are:
     - sitelists and refined sitelists checked in to a github repo
-
     - sitelist metadata in the form of CSV setasides where each site is
     queried to see if the web content contains advanced HTML or
     javascript characteristics, and if so a boolean true is put in the
@@ -46,7 +44,6 @@ and surveying on google collab-hosted scripts will not connect to Iran
     metrics to either influx db entries of csv files, suitable for import
     into python/Pandas data frame.
 
-4. Analyze Survey
-
-Load csv files into pandas in Google Collab. Results can be
-partitioned via the setasides to focus on particular optimizations.
+5. Analyze Survey
+  Load csv files into pandas in Google Collab. Results can be
+  partitioned via the setasides to focus on particular optimizations.
