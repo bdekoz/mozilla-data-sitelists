@@ -30,7 +30,6 @@ and surveying on google collab-hosted scripts will not connect to Iran
   warned that running large sitelists with multiple iterations and a
   matrix of different browsers can take up a lot of time (days/bleeding
   into weeks) and monopolize machines.
-
   The outputs of this survey are:
     - sitelists and refined sitelists checked in to a github repo
     - sitelist metadata in the form of CSV setasides where each site is
