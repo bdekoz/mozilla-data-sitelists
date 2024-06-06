@@ -54,5 +54,5 @@ with urllib.request.urlopen(sitefile) as response:
       passlog.write(origin + newline);
     except:
       continue;
-    errlog.close();
-    passlog.close();
+  errlog.close();
+  passlog.close();
