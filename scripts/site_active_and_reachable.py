@@ -40,22 +40,19 @@ def origin_check_readable(origin, logfile):
 
 
 #@title check sitelist
-def origin_check():
-  with urllib.request.urlopen(sitefile) as response:
-    print("found: " + sitefile);
-    errlog = open(errfile, "w");
-    passlog = open(okfile, "w");
-    print(errfile);
-    print(okfile);
-    for line in response.readlines():
-      origin = line.decode("ascii").strip(newline); # utf-8, ascii
-      try:
-        origin_check_readable(origin, errlog);
-        passlog.write(origin + newline);
-      except:
-        continue;
-      errlog.close();
-      passlog.close();
-
-# call it.
-origin_check();
+with urllib.request.urlopen(sitefile) as response:
+  print("found: " + sitefile);
+  errlog = open(errfile, "w");
+  passlog = open(okfile, "w");
+  print(errfile);
+  print(okfile);
+  for line in response.readlines():
+    origin = line.decode("ascii").strip(newline); # utf-8, ascii
+    print(origin)
+    try:
+      origin_check_readable(origin, errlog);
+      passlog.write(origin + newline);
+    except:
+      continue;
+    errlog.close();
+    passlog.close();
