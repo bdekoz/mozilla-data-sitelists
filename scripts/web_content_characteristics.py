@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # -*- coding: utf-8 -*-
 """web-content-characteristics.ipynb
 
@@ -26,9 +28,9 @@ newline = "\n";
 
 # sitelist data locations
 data_prefix ='https://raw.githubusercontent.com/bdekoz/mozilla-data-lcp/main/';
-sitebase = 'CrUX_global_200_10M-2023-12';
-sitelist = sitebase + '.txt.ping';
-sitefile = data_prefix + "sitelists/CrUX.2023-12/" + sitelist;
+sitebase = 'sitelists/CrUX.2024-04/';
+sitelist = 'rank-10M-phone-10k-sites';
+sitefile = data_prefix + sitebase + sitelist + ".txt";
 
 # sitelist currently reachable
 #errfile = gdriveprefix + sitebase + ".error.txt";
@@ -58,30 +60,6 @@ def origin_contains(origin, match, logfile):
   if match in r.text:
     matchp = True
   return matchp
-
-
-
-#@title check sitelist
-
-#with urllib.request.urlopen(sitefile) as response:
-#  print("found: " + sitefile);
-
-#  errlog = open(errfile, "w");
-#  passlog = open(okfile, "w");
-#  print(errfile);
-#  print(okfile);
-
-# for line in response.readlines():
-#    origin = line.decode("ascii").strip(newline); # utf-8, ascii
-#    try:
-#      origin_check_readable(origin, errlog);
-#      passlog.write(origin + newline);
-#    except:
-#      continue;
-
-#  errlog.close();
-#  passlog.close();
-
 
 
 #@title create_content_setasides(sitefile, tag, match)
