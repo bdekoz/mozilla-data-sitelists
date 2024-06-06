@@ -31,10 +31,10 @@ okfile = sitelist + ".pass.txt";
 
 
 #@title origin_check_readable(origin, log)
-# check origin to see if it can be read
+# check origin to see if it can be read within a timeout
 def origin_check_readable(origin, logfile):
   try:
-    r = requests.get(origin);
+    r = requests.get(origin, timeout=10);
   except:
     logfile.write(origin + newline);
 
