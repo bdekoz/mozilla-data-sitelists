@@ -37,13 +37,14 @@ def origin_check_readable(origin, logfile):
     r = requests.get(origin, timeout=10);
   except:
     logfile.write(origin + newline);
+    raise;
 
 
-#@title check sitelist
+#@title check sitelist, write to unbuffered log files
 with urllib.request.urlopen(sitefile) as response:
   print("found: " + sitefile);
-  errlog = open(errfile, "w");
-  passlog = open(okfile, "w");
+  errlog = open(errfile, "w", 0);
+  passlog = open(okfile, "w", 0);
   print(errfile);
   print(okfile);
   for line in response.readlines():
