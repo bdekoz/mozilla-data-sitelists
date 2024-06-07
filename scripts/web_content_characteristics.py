@@ -21,6 +21,7 @@ Original file is located at
 import numpy as np
 import pandas as pd
 import urllib.request
+import requests
 
 # useful constants
 tab = "\t";
@@ -30,36 +31,7 @@ newline = "\n";
 data_prefix ='https://raw.githubusercontent.com/bdekoz/mozilla-data-lcp/main/';
 sitebase = 'sitelists/CrUX.2024-04/';
 sitelist = 'rank-10M-phone-10k-sites';
-sitefile = data_prefix + sitebase + sitelist + ".txt";
-
-# sitelist currently reachable
-#errfile = gdriveprefix + sitebase + ".error.txt";
-#okfile = gdriveprefix + sitebase + ".pass.txt";
-
-#@title percentage(numerator, denom)
-
-def percentage(part, whole):
-  Percentage = 100 * float(part)/float(whole)
-  return str(int(round(Percentage,0))) + '%'
-
-#@title origin_check_readable(origin, log) / origin_contains(origin, match)
-
-import requests
-
-# check origin to see if it can be read
-def origin_check_readable(origin, logfile):
-  try:
-    r = requests.get(origin);
-  except:
-    logfile.write(origin + newline);
-
-
-def origin_contains(origin, match, logfile):
-  matchp = False
-  r = requests.get(origin);
-  if match in r.text:
-    matchp = True
-  return matchp
+sitefile = data_prefix + sitebase + sitelist + ".pass.txt";
 
 
 #@title create_content_setasides(sitefile, tag, match)
@@ -108,7 +80,7 @@ def create_content_traits_1(sitefile, tag, matchstr):
 
       try:
         matchp = False
-        r = requests.get(origin);
+        r = requests.get(origin, timeout=10);
         if matchstr in r.text:
           matchp = True
         print(str(linen) + tab + str(matchp));
@@ -137,7 +109,7 @@ def create_content_traits_2(sitefile, tag, matchstr1, matchstr2):
 
       try:
         matchp = False
-        r = requests.get(origin);
+        r = requests.get(origin, timeout=10);
         if matchstr1 in r.text:
           matchp = True
         if matchstr2 in r.text:
@@ -162,8 +134,8 @@ def create_content_traits_2(sitefile, tag, matchstr1, matchstr2):
 #create_content_traits_1(sitefile, "wc4", wc4);
 #create_content_traits_1(sitefile, "wc5", wc5);
 
-create_content_traits_2(sitefile, "dns-prefetch", wc1, wc1a);
-create_content_traits_2(sitefile, "preconnect", wc2, wc2a);
+#create_content_traits_2(sitefile, "dns-prefetch", wc1, wc1a);
+#create_content_traits_2(sitefile, "preconnect", wc2, wc2a);
 create_content_traits_2(sitefile, "preload", wc3, wc3a);
 create_content_traits_2(sitefile, "prerender", wc4, wc4a);
 create_content_traits_2(sitefile, "dictionary", wc5, wc5a);
