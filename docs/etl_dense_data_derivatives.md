@@ -41,7 +41,13 @@ Use $MOZPERFAX/bin/moz-perf-x-transform.exe, like so:
 
 moz-perf-x-transform.exe ./csv.fenix_nightly/ ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
 
-4. Generate sitelists for web content setasides.
+4. Label fields of csv files
 
-5. CSV to python.
-6. CSV to influx.
+Add as the first line to the consolidated csv file, so that it's easier to manipulate in python/pandas
+
+url-id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp-load|lcp-render|lcp-element
+
+5. Generate sitelists for web content setasides.
+
+6. CSV to python.
+7. CSV to influx.
