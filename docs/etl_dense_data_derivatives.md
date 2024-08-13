@@ -28,18 +28,17 @@ example, the fenix_nightly directory may have 9447 files, and the
 chrome_125 directory may have 9547. Don't be alarmed if this happens.
 
 
-3. From consolidated results json folder above, generate individual csv files.
+2. From consolidated results json folder above, generate individual csv files.
+   Use $MOZPERFBTS/transform-dir-with-1-metric-cosmology-to-csv.sh
 
-Use $MOZPERFBTS/transform-dir-with-1-metric-cosmology-to-csv.sh
+   This script uses a binary that reads a result browsertime json file
+   and extracts LCP and metric information (from moz-perf-x-extract.cc,
+   the function extract_browsertime_lcp). Like so:
 
-This script uses a binary that reads a result browsertime json file
-and extracts LCP and metric information (from moz-perf-x-extract.cc,
-the function extract_browsertime_lcp). Like so:
+   moz-perf-x-extract-lcp.exe site1.json sitelist
 
-moz-perf-x-extract-lcp.exe site1.json sitelist
-
-Sample script invocation:
-transform-dir-with-1-metric-cosmology-to-csv.sh ./json.fenix_nightly ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
+   Sample script invocation:
+   transform-dir-with-1-metric-cosmology-to-csv.sh ./json.fenix_nightly ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
 
 
 3. Take individual directory of csv files, and make a consolidated csv
