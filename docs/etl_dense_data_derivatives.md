@@ -47,7 +47,7 @@ there are no results for a given origin/URL, then that space is empty.
 Use $MOZPERFAX/bin/moz-perf-x-transform.exe (from
 moz-perf-x-transform.cc), like so:
 
-moz-perf-x-transform.exe ./csv.fenix_nightly/ ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
+   moz-perf-x-transform.exe ./csv.fenix_nightly/ ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
 
 
 4. Consistency check the consolidated csv file.
@@ -59,7 +59,7 @@ moz-perf-x-csv-delim-consistent.exe ./chrome_125-consolidated.lcp.csv
 5. Label fields of csv files
 Add the following label as the first line to the consolidated csv file, so that it's easier to manipulate in python/pandas. This is the column index.
 
-url_id|url|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp_load|lcp_render|lcp_element
+   url_id|url|power|fetchStart|connectStart|responseStart|SpeedIndex|VC85|fcp|lcp_load|lcp_render|lcp_element
 
 
 6. Generate sitelists for web content setasides.
