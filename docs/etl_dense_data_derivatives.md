@@ -6,21 +6,29 @@ Extact, transform, load data steps.
 0. Run browsertime according to [Andrew Creskey's browsertime scripts](https://github.com/acreskeyMoz/browsertime_scripts).
 
 
-1. From the browsertime results folder, separate into
+1. Consolidate the browsertime results folder into un-nested browser-specific directories with just data files. Separate into
+
    browser/site-1.json
+   browser/site-1.har
    browser/site-2.json
+   browser/site-2.har
    ...
    browser/site-n.json
+   browser/site-n.har
 
    Use the script [copy-json-files-to-one-dir-2024.sh](https://github.com/bdekoz/mozilla-perf-analysis-x/blob/main/scripts/copy-json-files-to-one-dir-2024.sh)
 
+   Like so:
+
+   copy-json-files-to-one-dir-2024.sh  browsertime-results
+   
    Depending on the browsers and configurations tested, there may be a
 different number of files in each browser-specific directory. For
 example, the fenix_nightly directory may have 9447 files, and the
 chrome_125 directory may have 9547. Don't be alarmed if this happens.
 
 
-2. From consolidated results json folder above, generate individual csv files.
+3. From consolidated results json folder above, generate individual csv files.
 
 Use $MOZPERFBTS/transform-dir-with-1-metric-cosmology-to-csv.sh
 
