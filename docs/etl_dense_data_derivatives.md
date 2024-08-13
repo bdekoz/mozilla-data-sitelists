@@ -8,13 +8,13 @@ Extact, transform, load data steps.
 
 1. Consolidate the browsertime results folder into un-nested browser-specific directories with just data files. Separate into
 
-   browser/site-1.json
-   browser/site-1.har
-   browser/site-2.json
-   browser/site-2.har
-   ...
-   browser/site-n.json
-   browser/site-n.har
+   browser/site-1.json  
+   browser/site-1.har  
+   browser/site-2.json  
+   browser/site-2.har  
+   ...  
+   browser/site-n.json  
+   browser/site-n.har  
 
    Use the script [copy-json-files-to-one-dir-2024.sh](https://github.com/bdekoz/mozilla-perf-analysis-x/blob/main/scripts/copy-json-files-to-one-dir-2024.sh)
 
