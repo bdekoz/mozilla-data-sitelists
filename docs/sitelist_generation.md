@@ -3,7 +3,7 @@
 How to go from the CrUX site to a sorted list that will serve as input
 for large-site surveys with browsertime.
 
-1. Go to the CruX BigQuery site. Select CrUX segment: date, type of
+1. Go to the CruX BigQuery [site](https://console.cloud.google.com/bigquery?p=chrome-ux-report&;d=all&;page=dataset&authuser=0&project=crux-2024&pli=1). Select CrUX segment: date, type of
 computer, determine how large the site should be, and how many sites
 you want back. You'll get a json file back.
 
