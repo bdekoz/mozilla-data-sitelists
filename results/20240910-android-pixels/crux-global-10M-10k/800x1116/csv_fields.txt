@@ -1,0 +1,1 @@
+url_id|url|power|redirectEnd|fetchStart|domainLookupStart|connectStart|requestStart|responseStart|domContentLoadedEventStart|domComplete|SpeedIndex|VC85|fcp|lcp_load|lcp_render|lcp_element
