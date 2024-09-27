@@ -20,7 +20,7 @@ Extact, transform, load data steps.
 
    Like so:
 
-   copy-json-files-to-one-dir-2024.sh  browsertime-results
+   > $MOZPERFAX/scripts/copy-json-files-to-one-dir-2024.sh  browsertime-results
    
    Depending on the browsers and configurations tested, there may be a
 different number of files in each browser-specific directory. For
@@ -38,7 +38,7 @@ chrome_125 directory may have 9547. Don't be alarmed if this happens.
    moz-perf-x-extract-lcp.exe site1.json sitelist
 
    Sample script invocation:
-   transform-dir-with-1-metric-cosmology-to-csv.sh ./json.fenix_nightly ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
+   > $MOZPERFBTS/transform-dir-with-1-metric-cosmology-to-csv.sh ./json.fenix_nightly ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
 
 
 3. Take individual directory of csv files, and make a consolidated csv
@@ -47,13 +47,14 @@ there are no results for a given origin/URL, then that space is empty.
 Use $MOZPERFAX/bin/moz-perf-x-transform.exe (from
 moz-perf-x-transform.cc), like so:
 
-   moz-perf-x-transform.exe ./csv.fenix_nightly/ ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
+ > $MOZPERFAX/bin/moz-perf-x-transform.exe ./csv.fenix_nightly/ ../../../../sitelists/CrUX.2024-04/rank-10M-phone-10k-sites.pass.txt
 
 
 4. Consistency check the consolidated csv file.
 Make sure same number of delimiters on each file, no special characters, etc.
 (from moz-perf-x-transform.cc)
-moz-perf-x-csv-delim-consistent.exe ./chrome_125-consolidated.lcp.csv
+
+> $MOZPERFAX/bin/moz-perf-x-csv-delim-consistent.exe ./chrome_125-consolidated.lcp.csv
 
 
 5. Label fields of csv files
