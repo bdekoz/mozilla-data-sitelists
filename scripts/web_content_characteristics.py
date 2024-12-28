@@ -28,11 +28,11 @@ tab = "\t";
 newline = "\n";
 
 # sitelist data locations
-data_prefix ='https://raw.githubusercontent.com/bdekoz/mozilla-data-lcp/main/';
-sitebase = 'sitelists/CrUX.2024-04/';
+data_prefix ='https://raw.githubusercontent.com/bdekoz/mozilla-data-sitelists/main/';
+sitebase = 'sitelists/CrUX.2024-11/';
 sitelist = 'rank-10M-phone-10k-sites';
 sitefile = data_prefix + sitebase + sitelist + ".pass.txt";
-
+print("sitelist file: " + sitefile)
 
 #@title create_content_setasides(sitefile, tag, match)
 
@@ -134,8 +134,8 @@ def create_content_traits_2(sitefile, tag, matchstr1, matchstr2):
 #create_content_traits_1(sitefile, "wc4", wc4);
 #create_content_traits_1(sitefile, "wc5", wc5);
 
-#create_content_traits_2(sitefile, "dns-prefetch", wc1, wc1a);
-#create_content_traits_2(sitefile, "preconnect", wc2, wc2a);
+create_content_traits_2(sitefile, "dns-prefetch", wc1, wc1a);
+create_content_traits_2(sitefile, "preconnect", wc2, wc2a);
 create_content_traits_2(sitefile, "preload", wc3, wc3a);
 create_content_traits_2(sitefile, "prerender", wc4, wc4a);
 create_content_traits_2(sitefile, "dictionary", wc5, wc5a);

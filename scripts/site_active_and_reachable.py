@@ -20,8 +20,8 @@ tab = "\t";
 newline = "\n";
 
 # sitelist data locations
-data_prefix = 'https://raw.githubusercontent.com/bdekoz/mozilla-data-lcp/main/';
-sitebase = 'sitelists/CrUX.2024-04/';
+data_prefix = 'https://raw.githubusercontent.com/bdekoz/mozilla-data-sitelists/main/';
+sitebase = 'sitelists/CrUX.2024-11/';
 sitelist = 'rank-10M-phone-10k-sites';
 sitefile = data_prefix + sitebase + sitelist + ".txt";
 
