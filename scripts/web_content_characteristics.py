@@ -64,8 +64,8 @@ wc4a='rel=prefetch';
 wc5='rel="prerender"';
 wc5a='rel=prerender';
 
-wc5='rel="dictionary"';
-wc5a='rel=dictionary';
+wc6='rel="compression-dictionary"';
+wc6a='rel=compression-dictionary';
 
 
 def create_content_traits_1(sitefile, tag, matchstr):
@@ -137,5 +137,6 @@ def create_content_traits_2(sitefile, tag, matchstr1, matchstr2):
 create_content_traits_2(sitefile, "dns-prefetch", wc1, wc1a);
 create_content_traits_2(sitefile, "preconnect", wc2, wc2a);
 create_content_traits_2(sitefile, "preload", wc3, wc3a);
-create_content_traits_2(sitefile, "prerender", wc4, wc4a);
-create_content_traits_2(sitefile, "dictionary", wc5, wc5a);
+create_content_traits_2(sitefile, "prefetch", wc4, wc4a);
+create_content_traits_2(sitefile, "prerender", wc5, wc5a);
+create_content_traits_2(sitefile, "compression-dictionary", wc6, wc6a);
