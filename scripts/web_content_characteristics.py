@@ -30,7 +30,8 @@ newline = "\n";
 # sitelist data locations
 data_prefix ='https://raw.githubusercontent.com/bdekoz/mozilla-data-sitelists/main/';
 sitebase = 'sitelists/CrUX.2024-11/';
-sitelist = 'rank-10M-phone-10k-sites';
+#sitelist = 'rank-10M-phone-10k-sites';
+sitelist = 'rank-1M-desktop-100k-sites';
 sitefile = data_prefix + sitebase + sitelist + ".pass.txt";
 print("sitelist file: " + sitefile)
 
@@ -66,6 +67,9 @@ wc5a='rel=prerender';
 
 wc6='rel="compression-dictionary"';
 wc6a='rel=compression-dictionary';
+wc6b='Use-As-Dictionary';
+wc6c='Available-Dictionary';
+wc6d='Dictionary-ID';
 
 
 def create_content_traits_1(sitefile, tag, matchstr):
@@ -128,15 +132,51 @@ def create_content_traits_2(sitefile, tag, matchstr1, matchstr2):
   df.to_csv(tag + ".csv");
 
 
+def create_content_traits_3(sitefile, tag, matchstr1, matchstr2, matchstr3):
+  log = open(tag + ".error.log", "w");
+  df = pd.DataFrame(columns=[tag], index=range(siten))
+
+  # Scan and store data for lookups.
+  with urllib.request.urlopen(sitefile) as response:
+    linen = 0
+    for line in response.readlines():
+      origin = line.decode("ascii").strip(newline); # utf-8, ascii
+
+      try:
+        matchp = False
+        r = requests.get(origin, timeout=10);
+        if matchstr1 in r.text:
+          matchp = True
+        if matchstr2 in r.text:
+          matchp = True
+        if matchstr3 in r.text:
+          matchp = True
+        print(str(linen) + tab + str(matchp));
+        df.iloc[linen, 0] = matchp;
+      except:
+        log.write(str(linen) + ',' + origin + newline);
+        df.iloc[linen, 0] = np.NaN;
+        continue;
+      finally:
+        linen += 1;
+
+  print("finished");
+  log.close();
+  df.to_csv(tag + ".csv");
+
+
 #create_content_traits_1(sitefile, "wc1", wc1);
 #create_content_traits_1(sitefile, "wc2", wc2);
 #create_content_traits_1(sitefile, "wc3", wc3);
 #create_content_traits_1(sitefile, "wc4", wc4);
 #create_content_traits_1(sitefile, "wc5", wc5);
 
-create_content_traits_2(sitefile, "dns-prefetch", wc1, wc1a);
-create_content_traits_2(sitefile, "preconnect", wc2, wc2a);
-create_content_traits_2(sitefile, "preload", wc3, wc3a);
-create_content_traits_2(sitefile, "prefetch", wc4, wc4a);
-create_content_traits_2(sitefile, "prerender", wc5, wc5a);
-create_content_traits_2(sitefile, "compression-dictionary", wc6, wc6a);
+#create_content_traits_2(sitefile, "dns-prefetch", wc1, wc1a);
+#create_content_traits_2(sitefile, "preconnect", wc2, wc2a);
+#create_content_traits_2(sitefile, "preload", wc3, wc3a);
+#create_content_traits_2(sitefile, "prefetch", wc4, wc4a);
+#create_content_traits_2(sitefile, "prerender", wc5, wc5a);
+#create_content_traits_2(sitefile, "compression-dictionary", wc6, wc6a);
+
+create_content_traits_3(sitefile, "compression-dictionary-header",
+                        wc6b, wc6c, wc6d);
