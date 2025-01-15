@@ -36,7 +36,7 @@ print("sitelist file: " + sitefile)
 
 #@title create_content_setasides(sitefile, tag, match)
 
-# Open the URL and read the contents, establish sitelist size.
+# Open the sitelist URL and read the contents, establish sitelist size.
 siten=0;
 with urllib.request.urlopen(sitefile) as response:
   siten = len(response.readlines())
