@@ -14,47 +14,82 @@ import numpy as np
 import pandas as pd
 import urllib.request
 import requests
+import sys
+import os
+import json
+import datetime
+
 
 # useful constants
 tab = "\t";
 newline = "\n";
+tstart = datetime.datetime.now()
+iso_date = tstart.strftime("%Y-%m-%d")
 
 # sitelist data locations
-data_prefix = 'https://raw.githubusercontent.com/bdekoz/mozilla-data-sitelists/main/';
-sitebase = 'sitelists/CrUX.2024-11/';
-#sitelist = 'rank-10M-phone-10k-sites';
-sitelist = 'rank-1M-desktop-100k-sites';
-sitefile = data_prefix + sitebase + sitelist + ".txt";
+#
+# data_prefix = 'https://raw.githubusercontent.com/bdekoz/mozilla-data-sitelists/main/';
+# sitebase = 'sitelists/CrUX.2024-11/';
+# sitelist = 'rank-10M-phone-10k-sites';
+# sitefile = data_prefix + sitebase + sitelist + ".txt";
+#
+# setup input file, output file naming conventions
+isitefile = sys.argv[1];
+sitelist = os.path.splitext(os.path.basename(isitefile))[0]
+print (sitelist)
 
 # sitelist currently reachable
 errfile = sitelist + ".fail.txt";
 okfile = sitelist + ".pass.txt";
 
+# Starting at zero, line number of sitelist.
+oid=0
 
 #@title origin_check_readable(origin, log)
 # check origin to see if it can be read within a timeout
-def origin_check_readable(origin, logfile):
+def origin_check_readable_response(origin, logfile):
   try:
     r = requests.get(origin, timeout=10);
+
+    # gather response for later serialization
+    odict = {
+      'url': r.request.url,
+      'text': r.text,
+      'headers': dict(r.headers),
+      'status_code': r.status_code,
+      'datetime': datetime.datetime.now().isoformat(),
+    }
+
+    # serialize response dictionary
+    ofname = sitelist + "-response-" + str(oid).zfill(6) + ".json"
+    with open(ofname, 'w') as of:
+      json.dump(odict, of, indent=2)
+
   except:
     logfile.write(origin + newline);
     raise;
 
 
 #@title check sitelist, write to unbuffered log files
-with urllib.request.urlopen(sitefile) as response:
-  print("found: " + sitefile);
+#with urllib.request.urlopen(isitefile) as response:
+with open(isitefile) as response:
+  print("found: " + isitefile);
   errlog = open(errfile, "w", 1);
   passlog = open(okfile, "w", 1);
   print(errfile);
   print(okfile);
   for line in response.readlines():
-    origin = line.decode("ascii").strip(newline); # utf-8, ascii
+    #origin = line.decode("ascii").strip(newline); # utf-8, ascii
+    origin = line.strip(newline); # utf-8, ascii
     print(origin)
     try:
-      origin_check_readable(origin, errlog);
+      origin_check_readable_response(origin, errlog);
       passlog.write(origin + newline);
     except:
       continue;
+    oid += 1;
   errlog.close();
   passlog.close();
+  tend = datetime.datetime.now()
+  print(tstart);
+  print(tend);
