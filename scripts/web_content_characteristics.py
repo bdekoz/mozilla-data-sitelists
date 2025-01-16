@@ -65,6 +65,7 @@ wc4a='rel=prefetch';
 wc5='rel="prerender"';
 wc5a='rel=prerender';
 
+# https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/
 wc6='rel="compression-dictionary"';
 wc6a='rel=compression-dictionary';
 wc6b='Use-As-Dictionary';
