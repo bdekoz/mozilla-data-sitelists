@@ -23,6 +23,10 @@ mb_preload = [ 'rel="preload"', 'rel=preload' ]
 mb_prefetch = [ 'rel="prefetch"', 'rel=prefetch' ]
 mb_prerender = [ 'rel="prerender"', 'rel=prerender' ]
 
+# google publisher tag
+# https://developers.google.com/publisher-tag
+mb_gpt = [ 'gpt.js' ]
+
 # https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/
 mb_compressiondict = [ 'rel="compression-dictionary"', 'rel=compression-dictionary' ]
 mh_compressiondict = [ 'Use-As-Dictionary', 'Available-Dictionary', 'Dictionary-ID' ]
@@ -40,8 +44,8 @@ def classify(file, tag, matchdict, field):
       data = json.load(f)
       data_url = data['url']
       #data_text = data['text']
-      data_field = data[field]            
-      
+      data_field = data[field]
+
       #print(data.keys())
 
       # data = {
@@ -57,7 +61,7 @@ def classify(file, tag, matchdict, field):
         if item in data_field:
           matchp = True
         #print(f"item: {item}")
-        #print(f"txt: {data_text}")        
+        #print(f"txt: {data_text}")
 
       if matchp:
         with open("response_" + field + "_matches_" + tag + ".txt", "a") as ofile:
@@ -81,11 +85,13 @@ def process_json_files(directory, tag, matchdict, field):
 # origin_content_classifer.py ./rank-10-responses
 idir = sys.argv[1];
 
-process_json_files(idir, "dns-prefetch", mb_dnsprefetch, "text")
-process_json_files(idir, "preconnect", mb_preconnect, "text")
-process_json_files(idir, "preload", mb_preload, "text")
-process_json_files(idir, "prefetch", mb_prefetch, "text")
-process_json_files(idir, "prerender", mb_prerender, "text")
+#process_json_files(idir, "dns-prefetch", mb_dnsprefetch, "text")
+#process_json_files(idir, "preconnect", mb_preconnect, "text")
+#process_json_files(idir, "preload", mb_preload, "text")
+#process_json_files(idir, "prefetch", mb_prefetch, "text")
+#process_json_files(idir, "prerender", mb_prerender, "text")
 
-process_json_files(idir, "compression-dictionary", mb_compressiondict, "text")
-process_json_files(idir, "compression-dictionary", mh_compressiondict, "headers")
+#process_json_files(idir, "compression-dictionary", mb_compressiondict, "text")
+#process_json_files(idir, "compression-dictionary", mh_compressiondict, "headers")
+
+process_json_files(idir, "google-publisher-tag", mb_gpt, "text")
