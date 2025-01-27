@@ -9,7 +9,7 @@
 
 import json
 import os
-import sys
+#import sys
 
 # Web Content string fragments
 # <link rel="preconnect" or <link rel=preconnect
@@ -31,7 +31,8 @@ mb_gpt = [ 'gpt.js' ]
 mb_compressiondict = [ 'rel="compression-dictionary"', 'rel=compression-dictionary' ]
 mh_compressiondict = [ 'Use-As-Dictionary', 'Available-Dictionary', 'Dictionary-ID' ]
 
-def classify(file, tag, matchdict, field):
+
+def classify_sitelist(file, tag, matchdict, field):
   """
   This is a placeholder function. Replace this with your actual logic.
   """
@@ -72,26 +73,25 @@ def classify(file, tag, matchdict, field):
   except Exception as e:
     print(f"Error processing {file}: {e}")
 
-def process_json_files(directory, tag, matchdict, field):
+
+# Assumes input directory is the base directory of a sitelist scan that serialized responses.
+# aka, results from run of origin_reachable_and_response.py
+def classify_json_files(directory, tag, matchdict, field):
   origincount=1
   for filename in os.listdir(directory):
     if filename.endswith(".json"):
       filepath = os.path.join(directory, filename)
-      classify(filepath, tag, matchdict, field)
+      classify_sitelist(filepath, tag, matchdict, field)
       origincount += 1
   print("sites total: " + str(origincount))
 
-# Usage:
-# origin_content_classifer.py ./rank-10-responses
-idir = sys.argv[1];
 
-#process_json_files(idir, "dns-prefetch", mb_dnsprefetch, "text")
-#process_json_files(idir, "preconnect", mb_preconnect, "text")
-#process_json_files(idir, "preload", mb_preload, "text")
-#process_json_files(idir, "prefetch", mb_prefetch, "text")
-#process_json_files(idir, "prerender", mb_prerender, "text")
-
-#process_json_files(idir, "compression-dictionary", mb_compressiondict, "text")
-#process_json_files(idir, "compression-dictionary", mh_compressiondict, "headers")
-
-process_json_files(idir, "google-publisher-tag", mb_gpt, "text")
+def classify_web_content(idir):
+  classify_json_files(idir, "dns-prefetch", mb_dnsprefetch, "text")
+  classify_json_files(idir, "preconnect", mb_preconnect, "text")
+  classify_json_files(idir, "preload", mb_preload, "text")
+  classify_json_files(idir, "prefetch", mb_prefetch, "text")
+  classify_json_files(idir, "prerender", mb_prerender, "text")
+  classify_json_files(idir, "compression-dictionary", mb_compressiondict, "text")
+  classify_json_files(idir, "compression-dictionary", mh_compressiondict, "headers")
+  classify_json_files(idir, "google-publisher-tag", mb_gpt, "text")
