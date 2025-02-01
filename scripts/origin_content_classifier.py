@@ -32,19 +32,25 @@ mb_gpt = [ 'gpt.js' ]
 mb_compressiondict = [ 'rel="compression-dictionary"', 'rel=compression-dictionary' ]
 mh_compressiondict = [ 'Use-As-Dictionary', 'Available-Dictionary', 'Dictionary-ID' ]
 
-# Take an input url and return dictionary of classifier types.
-def classify_origin(r, tag, matchdict, field):
+def classify_origin(rfielddict, matchdict):
+  matchp = 0
+  for item in matchdict:
+    if item in rfielddict:
+      matchp = 1
+  return matchp
+
+
+# Take a single input url and return dictionary of classifier types.
+def classify_origin_field(r, matchdict, field):
   if field == "headers":
     sfield = dict(r.headers);
   if field == "text":
     sfield = r.text;
-
-  matchp = 0
-  for item in matchdict:
-    if item in sfield:
-      matchp = 1
+  matchp = classify_origin(sfield, matchdict)
   return matchp
 
+
+# Take a single serialize response json file and append to match sitelist file.
 def classify_sitelist(file, tag, matchdict, field):
   """
   This is a placeholder function. Replace this with your actual logic.
@@ -90,7 +96,7 @@ def classify_sitelist(file, tag, matchdict, field):
 # Assumes input directory is the base directory of a sitelist scan that serialized responses.
 # aka, results from run of origin_reachable_and_response.py
 def classify_json_files(directory, tag, matchdict, field):
-  origincount=1
+  origincount=0
   for filename in os.listdir(directory):
     if filename.endswith(".json"):
       filepath = os.path.join(directory, filename)
@@ -99,6 +105,7 @@ def classify_json_files(directory, tag, matchdict, field):
   print("sites total: " + str(origincount))
 
 
+# Make sitelists for each of following.
 def classify_web_content_sitelists(idir):
   classify_json_files(idir, "dns-prefetch", mb_dnsprefetch, "text")
   classify_json_files(idir, "preconnect", mb_preconnect, "text")
@@ -110,22 +117,50 @@ def classify_web_content_sitelists(idir):
   classify_json_files(idir, "google-publisher-tag", mb_gpt, "text")
 
 
+# Make sitelist for no matches.
+def classify_web_content_zero(idir):
+  origincount=0
+  for filename in os.listdir(idir):
+    if filename.endswith(".json"):
+      filepath = os.path.join(idir, filename)
+      try:
+        with open(filepath, 'r') as f:
+          data = json.load(f)
+
+          data_text = data["text"];
+          m1p = classify_origin(data_text, mb_dnsprefetch)
+          m2p = classify_origin(data_text, mb_preconnect)
+          m3p = classify_origin(data_text, mb_preload)
+          m4p = classify_origin(data_text, mb_prefetch)
+          m5p = classify_origin(data_text, mb_prerender)
+          m6p = classify_origin(data_text, mb_gpt)
+          m7p = classify_origin(data_text, mb_compressiondict)
+
+          data_headers = data["headers"];          
+          m8p = classify_origin(data_headers, mh_compressiondict)
+          if not (m1p or m2p or m3p or m4p or m5p or m6p or m7p or m8p):
+            with open("response_" + "all" + "_matches_" + "zero" + ".txt", "a") as ofile:
+              ofile.write(data["url"] + '\n')
+      finally:
+        origincount += 1
+  print("sites total: " + str(origincount))
+
 def classify_web_content_traits(url):
   tdict = { }
   r = requests.get(url, timeout=10)
 
   compressiondictp = 0
-  ztp = classify_origin(r, "compression-dictionary", mb_compressiondict, "text")
-  zhp = classify_origin(r, "compression-dictionary-header", mh_compressiondict, "headers")
+  ztp = classify_origin_field(r, mb_compressiondict, "text")
+  zhp = classify_origin_field(r, mh_compressiondict, "headers")
   if ztp or zhp:
     compressiondictp = 1
   tdict["compression-dictionary"] = compressiondictp;
 
-  tdict["dns-prefetch"] = classify_origin(r, "dns-prefetch", mb_dnsprefetch, "text")
-  tdict["google-publisher-tag"] = classify_origin(r, "google-publisher-tag", mb_gpt, "text")
-  tdict["preconnect"] = classify_origin(r, "preconnect", mb_preconnect, "text")
-  tdict["prefetch"] = classify_origin(r, "prefetch", mb_prefetch, "text")
-  tdict["preload"] = classify_origin(r, "preload", mb_preload, "text")
-  tdict["prerender"] = classify_origin(r, "prerender", mb_prerender, "text")
+  tdict["dns-prefetch"] = classify_origin_field(r, mb_dnsprefetch, "text")
+  tdict["google-publisher-tag"] = classify_origin_field(r, mb_gpt, "text")
+  tdict["preconnect"] = classify_origin_field(r, mb_preconnect, "text")
+  tdict["prefetch"] = classify_origin_field(r, mb_prefetch, "text")
+  tdict["preload"] = classify_origin_field(r, mb_preload, "text")
+  tdict["prerender"] = classify_origin_field(r, mb_prerender, "text")
 
   return tdict
