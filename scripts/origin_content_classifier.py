@@ -117,34 +117,7 @@ def classify_web_content_sitelists(idir):
   classify_json_files(idir, "google-publisher-tag", mb_gpt, "text")
 
 
-# Make sitelist for no matches.
-def classify_web_content_zero(idir):
-  origincount=0
-  for filename in os.listdir(idir):
-    if filename.endswith(".json"):
-      filepath = os.path.join(idir, filename)
-      try:
-        with open(filepath, 'r') as f:
-          data = json.load(f)
-
-          data_text = data["text"];
-          m1p = classify_origin(data_text, mb_dnsprefetch)
-          m2p = classify_origin(data_text, mb_preconnect)
-          m3p = classify_origin(data_text, mb_preload)
-          m4p = classify_origin(data_text, mb_prefetch)
-          m5p = classify_origin(data_text, mb_prerender)
-          m6p = classify_origin(data_text, mb_gpt)
-          m7p = classify_origin(data_text, mb_compressiondict)
-
-          data_headers = data["headers"];          
-          m8p = classify_origin(data_headers, mh_compressiondict)
-          if not (m1p or m2p or m3p or m4p or m5p or m6p or m7p or m8p):
-            with open("response_" + "all" + "_matches_" + "zero" + ".txt", "a") as ofile:
-              ofile.write(data["url"] + '\n')
-      finally:
-        origincount += 1
-  print("sites total: " + str(origincount))
-
+# Serialzied json of content characteristics.
 def classify_web_content_traits(url):
   tdict = { }
   r = requests.get(url, timeout=10)
@@ -164,3 +137,66 @@ def classify_web_content_traits(url):
   tdict["prerender"] = classify_origin_field(r, mb_prerender, "text")
 
   return tdict
+
+
+# Integer of matching categories, or zero for none.
+def count_web_content_traits(data):
+  countn = 0;
+  data_text = data["text"];
+  data_headers = data["headers"];
+
+  countn += classify_origin(data_text, mb_dnsprefetch)
+  countn += classify_origin(data_text, mb_preconnect)
+  countn += classify_origin(data_text, mb_preload)
+  countn += classify_origin(data_text, mb_prefetch)
+  countn += classify_origin(data_text, mb_prerender)
+  countn += classify_origin(data_text, mb_gpt)
+
+  # compression dictionary only counts for one
+  cdictt = classify_origin(data_text, mb_compressiondict)
+  cdicth = classify_origin(data_headers, mh_compressiondict)
+  if (cdictt or cdicth):
+    countn += 1;
+  return countn;
+
+
+# Make sitelist for no matches
+def classify_web_content_zero(idir):
+  origincount=0
+  for filename in os.listdir(idir):
+    if filename.endswith(".json"):
+      filepath = os.path.join(idir, filename)
+      try:
+        with open(filepath, 'r') as f:
+          data = json.load(f)
+          countn = count_web_content_traits(data)
+          if (countn == 0):
+            with open("response_" + "all" + "_matches_" + "zero" + ".txt", "a") as ofile:
+              ofile.write(data["url"] + '\n')
+      finally:
+        origincount += 1
+  print("sites total: " + str(origincount))
+
+
+# Make sitelist for only match this one trait
+def classify_web_content_only(idir):
+  origincount=0
+  for filename in os.listdir(idir):
+    if filename.endswith(".json"):
+      filepath = os.path.join(idir, filename)
+      try:
+        with open(filepath, 'r') as f:
+          data = json.load(f)
+          countn = count_web_content_traits(data)
+          #onlyp = classify_origin(data["text"], mb_prefetch)
+          #onlyp = classify_origin(data["text"], mb_dnsprefetch)
+          #onlyp = classify_origin(data["text"], mb_gpt)
+          #onlyp = classify_origin(data["text"], mb_preload)
+          #onlyp = classify_origin(data["text"], mb_prerender)
+          onlyp = classify_origin(data["text"], mb_preconnect)
+          if (countn == 1 and onlyp):
+            with open("response_" + "text" + "_only_matches_" + "preconnect" + ".txt", "a") as ofile:
+              ofile.write(data["url"] + '\n')
+      finally:
+        origincount += 1
+  print("sites total: " + str(origincount))
