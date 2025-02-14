@@ -11,3 +11,11 @@ you want back. You'll get a json file back.
 [convert-crux-json-to-site-list.sh](https://github.com/bdekoz/mozilla-perf-browsertime-tools/blob/master/scripts/convert-crux-json-to-site-list.sh)
 
 3. Sort this list (uniq|sort on linux), and check it in. This is the starting list, which will now be refined as per the survey.
+
+4. Classify web content for subsets.
+
+5. First pass is a quick run through as much of the subset as is possible with one itteration, get rough data on LCP elementt match, see which sites can be VisuallyComplete at 10 sec, etc. Pick matching LCP elmeents (across phone/tablet, phone/desktop, chrome/firefox). Pick quick completing, do a managable subset of 40, 100.
+
+6. Strip NSFW
+
+7. Second pass is higher iteration, looking for low variation on target metrics, try for 10 good sites in each web content category.
