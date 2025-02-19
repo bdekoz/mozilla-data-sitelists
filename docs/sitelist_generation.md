@@ -14,7 +14,7 @@ you want back. You'll get a json file back.
 
 4. Classify web content for subsets.
 
-5. First pass is a quick run through as much of the subset as is possible with one itteration, get rough data on LCP elementt match, see which sites can be VisuallyComplete at 10 sec, etc. Pick matching LCP elmeents (across phone/tablet, phone/desktop, chrome/firefox). Pick quick completing, do a managable subset of 40, 100.
+5. First pass is a quick run through as much of the subset as is possible with one iteration, get rough data on LCP elementt match, see which sites can be VisuallyComplete at 10 sec, etc. Pick matching LCP elmeents (across phone/tablet, phone/desktop, chrome/firefox). Pick quick completing, do a managable subset of 40, 100.
 
 6. Strip NSFW
 
